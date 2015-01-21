@@ -1,11 +1,11 @@
 // QUESTION ONE
 // Show me how to calculate the average price of all items. Please console.log the average.
-// The output should be "The average price is $23.62"
+// The output should be "The average price is $23.63"
 
 
 // QUESTION TWO
 // Show me how to get an array of items that cost between $14.00 and $18.00 USD
-// The output should be:
+// The output should be the three objects, which will look something like:
 //
 // "Items that cost between $14.00 USD and $18.00 USD:"
 // [

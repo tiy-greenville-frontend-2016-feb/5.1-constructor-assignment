@@ -14,7 +14,7 @@ function it(description, contents){
 }
 
 // A simple function for expecting values
-// Ex: expect(sadie.color).toBe('black'); // should return true
+// Ex: expect(kepler.color).toBe('red'); // should return true
 function expect(target) {
   return {
     toBe: function(expectation) {
@@ -85,12 +85,12 @@ var faith = new Human({
 
 it("should make Kepler happy when Dan pets him", function(){
   expect(kepler.status).toBe('normal');
-  mason.pet(kepler);
+  dan.pet(kepler);
   expect(kepler.status).toBe('happy');
 });
 
-it("should make Kepler black", function(){
-  expect(kepler.color).toBe('black');
+it("should make Kepler red", function(){
+  expect(kepler.color).toBe('red');
 });
 
 it("should be make Moonshine hungry and Kepler not hungry", function(){
@@ -105,7 +105,7 @@ it("should make Moonshine no longer hungry when you feed him", function(){
 
 
 it("should not affect Atticus and Moonshine's owner properties when setting Dan as Kepler's owner ", function(){
-  sadie.owner = dan;
+  kepler.owner = dan;
   expect(moonshine.owner).toBe(undefined);
   expect(atticus.owner).toBe(undefined);
 });

@@ -49,8 +49,8 @@ function expect(target) {
 // \__,_/\____/\__, /____/  
 //            /____/        
 
-var sadie = new Dog({
-  color: "black",
+var kepler = new Dog({
+  color: "red",
   hungry: false
 });
 
@@ -67,9 +67,9 @@ var atticus = new Dog();
 //  / / / / /_/ / / / / / / /_/ / / / (__  ) 
 // /_/ /_/\__,_/_/ /_/ /_/\__,_/_/ /_/____/  
 
-var mason = new Human();
+var dan = new Human();
 
-var julia = new Human({
+var faith = new Human({
   cool: true
 });
 
@@ -83,36 +83,36 @@ var julia = new Human({
 // Don't edit this section. Instead make these tests pass by writing 
 // constructors in the constructor section above ;D
 
-it("should make Sadie happy when Mason pets her", function(){
-  expect(sadie.status).toBe('normal');
-  mason.pet(sadie);
-  expect(sadie.status).toBe('happy');
+it("should make Kepler happy when Dan pets him", function(){
+  expect(kepler.status).toBe('normal');
+  mason.pet(kepler);
+  expect(kepler.status).toBe('happy');
 });
 
-it("should make Sadie black", function(){
-  expect(sadie.color).toBe('black');
+it("should make Kepler black", function(){
+  expect(kepler.color).toBe('black');
 });
 
-it("should be make Moonshine hungry and Sadie not hungry", function(){
+it("should be make Moonshine hungry and Kepler not hungry", function(){
   expect(moonshine.hungry).toBe(true);
-  expect(sadie.hungry).toBe(false);
+  expect(kepler.hungry).toBe(false);
 });
 
 it("should make Moonshine no longer hungry when you feed him", function(){
-  julia.feed(moonshine);
+  faith.feed(moonshine);
   expect(moonshine.hungry).toBe(false);
 });
 
 
-it("should not affect Atticus and Moonshine's owner properties when setting Mason as Sadie's owner ", function(){
-  sadie.owner = mason;
+it("should not affect Atticus and Moonshine's owner properties when setting Dan as Kepler's owner ", function(){
+  sadie.owner = dan;
   expect(moonshine.owner).toBe(undefined);
   expect(atticus.owner).toBe(undefined);
 });
 
-it("should make Julia cool and Mason not cool", function(){
-  sadie.owner = mason;
-  expect(julia.cool).toBe(true);
-  expect(mason.cool).toBe(false);
+it("should make Faith cool and Dan not cool", function(){
+  kepler.owner = dan;
+  expect(faith.cool).toBe(true);
+  expect(dan.cool).toBe(false);
 });
 
